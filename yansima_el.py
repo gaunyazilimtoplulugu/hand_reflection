@@ -37,16 +37,7 @@ while True:
         cv2.line(img, (lmList[18][1],lmList[18][2]), (lmList[19][1],lmList[19][2]), (255,255,0),10)
         cv2.line(img, (lmList[19][1],lmList[19][2]), (lmList[20][1],lmList[20][2]), (0,0,0),10)
         cv2.line(img, (lmList[17][1],lmList[17][2]), (lmList[0][1],lmList[0][2]), (255,0,0),10)
-
-
-        # cv2.line(img, (lmList[0][1],lmList[4][2]), (lmList[8][1],lmList[8][2]), (255,0,0),10)
-        # cv2.line(img, (lmList[8][1],lmList[8][2]), (lmList[12][1],lmList[12][2]), (0,0,0),10)
-        # cv2.line(img, (lmList[12][1],lmList[12][2]), (lmList[16][1],lmList[16][2]), (255,255,0),10)
-        # cv2.line(img, (lmList[16][1],lmList[16][2]), (lmList[20][1],lmList[20][2]), (0,0,0),10)
-        # cv2.line(img, (lmList[20][1],lmList[20][2]), (lmList[19][1],lmList[19][2]), (0,0,0),10)
-        # cv2.line(img, (lmList[19][1],lmList[19][2]), (lmList[18][1],lmList[18][2]), (255,255,0),10)
-        # cv2.line(img, (lmList[18][1],lmList[18][2]), (lmList[17][1],lmList[17][2]), (0,0,0),10)
-        # cv2.line(img, (lmList[17][1],lmList[17][2]), (lmList[0][1],lmList[0][2]), (0,250,255),10)
+        
     cTime = time.time()
     fps = 1/(cTime-pTime)
     pTime = cTime

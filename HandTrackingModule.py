@@ -6,7 +6,7 @@ import time
 import HandTrackingModule as htm
 
 class handDetector():
-    def __init__(self,mode = False,maxHands= 2, detectionCon = 0.5,trackCon = 0.5):
+    def __init__(self,mode = False,maxHands= 2, detectionCon = 0.5,trackCon = 0.5): # you can change these values 
         self.mode = mode
         self.maxHands = maxHands
         self.detectionCon = detectionCon
@@ -14,12 +14,12 @@ class handDetector():
 
         self.mpHands = mp.solutions.hands
         self.hands = self.mpHands.Hands(self.mode,self.maxHands,
-                                        self.detectionCon,self.trackCon) # this class only uses RGB img
+                                        self.detectionCon,self.trackCon) # this class only uses RGB images
         self.mpDraw = mp.solutions.drawing_utils
 
     def findHands(self,img,draw = True):
         imgRGB = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-        self.results = self.hands.process(imgRGB) # self.results yapınca her yerde her methoddakullanabiliyoz
+        self.results = self.hands.process(imgRGB) # self.results yapınca her yerde her methodda kullanabiliyoz
         # print(results.multi_hand_landmarks) # elimizi koyduğu muzda bir sürü değer verir
         if self.results.multi_hand_landmarks:
             for handLms in self.results.multi_hand_landmarks:
